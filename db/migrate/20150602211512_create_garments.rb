@@ -6,7 +6,7 @@ class CreateGarments < ActiveRecord::Migration
       t.text :description
       t.decimal :price
       t.integer :sizes, default: 0
-      # t.references :collection, index: true, foreign_key: true
+      t.boolean :latest, default: false
 
       t.timestamps null: false
     end

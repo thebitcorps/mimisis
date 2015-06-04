@@ -1,12 +1,12 @@
 %h1 Listing garments
 
-%table
+%table.table
   %thead
     %tr
       %th Name
       %th Kind
       %th Description
-      %th Price
+      %th Latest
       %th Size
       %th Collection
       %th
@@ -19,8 +19,8 @@
         %td= garment.name
         %td= garment.kind
         %td= garment.description
-        %td= garment.price
-        %td= garment.size
+        %td= garment.latest
+        %td= garment.sizes
         %td= garment.collection
         %td= link_to 'Show', garment
         %td= link_to 'Edit', edit_garment_path(garment)

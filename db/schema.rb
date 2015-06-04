@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150604163455) do
+ActiveRecord::Schema.define(version: 20150604171128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "carousels", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "collections", force: :cascade do |t|
     t.string   "name"
@@ -29,12 +34,25 @@ ActiveRecord::Schema.define(version: 20150604163455) do
     t.text     "description"
     t.decimal  "price"
     t.integer  "sizes",         default: 0
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.boolean  "latest",        default: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.integer  "collection_id"
   end
 
   add_index "garments", ["collection_id"], name: "index_garments_on_collection_id", using: :btree
 
+  create_table "pictures", force: :cascade do |t|
+    t.string   "url"
+    t.string   "title"
+    t.string   "message"
+    t.integer  "carousel_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "pictures", ["carousel_id"], name: "index_pictures_on_carousel_id", using: :btree
+
   add_foreign_key "garments", "collections"
+  add_foreign_key "pictures", "carousels"
 end

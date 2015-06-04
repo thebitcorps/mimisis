@@ -16,7 +16,6 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'haml-rails'
 gem 'simple_form'
-
 gem 'twitter-bootstrap-rails'
 
 # Use jquery as the JavaScript library

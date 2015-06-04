@@ -1,28 +1,13 @@
-= form_for @garment do |f|
-  - if @garment.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@garment.errors.count, "error")} prohibited this garment from being saved:"
-      %ul
-        - @garment.errors.full_messages.each do |msg|
-          %li= msg
+= simple_form_for(@garment, html: { class: 'form-horizontal' }) do |f|
+  = f.error_notification
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :kind
-    = f.text_field :kind
-  .field
-    = f.label :description
-    = f.text_area :description
-  .field
-    = f.label :price
-    = f.text_field :price
-  .field
-    = f.label :sizes
-    = f.text_field :sizes
-  .field
-    = f.label :collection
-    = f.text_field :collection
-  .actions
+  .form-inputs
+    = f.input :name
+    = f.input :kind, as: :select, collection: Garment::GARMENT_KINDS
+    = f.input :description
+    = f.input :price
+    = f.input :sizes
+    = f.association :collection
+    = f.input :latest,as: :boolean
+  .form-actions
     = f.submit 'Save'

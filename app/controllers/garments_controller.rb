@@ -4,7 +4,7 @@ class GarmentsController < ApplicationController
   # GET /garments
   # GET /garments.json
   def index
-    @garments = Garment.all
+    @garments = Garment.order_by_date
   end
 
   # GET /garments/1
@@ -69,6 +69,6 @@ class GarmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def garment_params
-      params.require(:garment).permit(:name, :kind, :description, :price, :size_id, :collection_id)
+      params.require(:garment).permit(:name, :kind, :description, :price, :size_id, :collection_id,:latest)
     end
 end

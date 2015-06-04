@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Url:
+  = @carousel.url
+%p
+  %b Title:
+  = @carousel.title
+%p
+  %b Message:
+  = @carousel.message
+
+= link_to 'Edit', edit_carousel_path(@carousel)
+\|
+= link_to 'Back', carousels_path
