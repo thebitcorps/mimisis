@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @garment.name
+%p
+  %b Kind:
+  = @garment.kind
+%p
+  %b Description:
+  = @garment.description
+%p
+  %b Price:
+  = @garment.price
+%p
+  %b Size:
+  = @garment.size
+%p
+  %b Collection:
+  = @garment.collection
+
+= link_to 'Edit', edit_garment_path(@garment)
+\|
+= link_to 'Back', garments_path
