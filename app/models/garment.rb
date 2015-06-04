@@ -8,4 +8,8 @@ class Garment < ActiveRecord::Base
   def self.order_by_date
     all.order 'created_at desc'
   end
+
+  def self.latest_garments
+    where latest: true
+  end
 end

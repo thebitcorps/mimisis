@@ -8,4 +8,7 @@ class Collection < ActiveRecord::Base
     all.order 'created_at desc'
   end
 
+  def self.latest_collections
+    order_by_date.limit 10
+  end
 end
