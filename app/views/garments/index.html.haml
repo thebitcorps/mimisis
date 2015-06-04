@@ -21,7 +21,7 @@
         %td= garment.description
         %td= garment.latest
         %td= garment.sizes
-        %td= garment.collection
+        %td= garment.collection.name
         %td= link_to 'Show', garment
         %td= link_to 'Edit', edit_garment_path(garment)
         %td= link_to 'Destroy', garment, :method => :delete, :data => { :confirm => 'Are you sure?' }

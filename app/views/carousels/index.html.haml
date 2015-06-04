@@ -1,6 +1,6 @@
-%h1 Listing carousels
+%h1 Carousels
 
-%table
+%table.table
   %thead
     %tr
       %th Url
@@ -8,18 +8,18 @@
       %th Message
       %th
       %th
-      %th
 
   %tbody
-    - @carousels.each do |carousel|
+    - @carousel.pictures.each do |picture|
       %tr
-        %td= carousel.url
-        %td= carousel.title
-        %td= carousel.message
-        %td= link_to 'Show', carousel
-        %td= link_to 'Edit', edit_carousel_path(carousel)
-        %td= link_to 'Destroy', carousel, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= picture.url
+        %td= picture.title
+        %td= picture.message
+        %td= link_to 'Edit', edit_picture_path(picture)
+        %td= link_to 'Destroy', picture, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
 
 %br
 
-= link_to 'New Carousel', new_carousel_path
+= link_to 'New Picture', new_picture_path
+

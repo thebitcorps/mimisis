@@ -1,17 +1,6 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
 
-  # GET /pictures
-  # GET /pictures.json
-  def index
-    @pictures = Picture.all
-  end
-
-  # GET /pictures/1
-  # GET /pictures/1.json
-  def show
-  end
-
   # GET /pictures/new
   def new
     @picture = Picture.new
@@ -25,14 +14,12 @@ class PicturesController < ApplicationController
   # POST /pictures.json
   def create
     @picture = Picture.new(picture_params)
-
+    @picture.carousel = Carousel.last
     respond_to do |format|
       if @picture.save
-        format.html { redirect_to @picture, notice: 'Picture was successfully created.' }
-        format.json { render :show, status: :created, location: @picture }
+        format.html { redirect_to carousels_path, notice: 'Picture was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @picture.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -42,11 +29,9 @@ class PicturesController < ApplicationController
   def update
     respond_to do |format|
       if @picture.update(picture_params)
-        format.html { redirect_to @picture, notice: 'Picture was successfully updated.' }
-        format.json { render :show, status: :ok, location: @picture }
+        format.html { redirect_to carousels_path, notice: 'Picture was successfully updated.' }
       else
         format.html { render :edit }
-        format.json { render json: @picture.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,8 +41,7 @@ class PicturesController < ApplicationController
   def destroy
     @picture.destroy
     respond_to do |format|
-      format.html { redirect_to pictures_url, notice: 'Picture was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to carousels_path, notice: 'Picture was successfully destroyed.' }
     end
   end
 
