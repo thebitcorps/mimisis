@@ -1,5 +1,6 @@
 .image
-  = image_tag garment.image_url
+  = link_to image_tag(garment.image_url),"/visitors/garment/#{garment.id}"
+
 .content
   = garment.name
   = garment.description

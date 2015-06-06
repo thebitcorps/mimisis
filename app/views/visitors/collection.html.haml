@@ -1,8 +1,6 @@
-= render :partial => 'carousel'
+= render partial: 'carousel'
 
-= link_to 'Ropa',visitors_collection_path(garment_type: 'ropa')
-= link_to 'Bisuteria',visitors_collection_path(garment_type: 'bisuteria')
-= link_to 'Bolsas',visitors_collection_path(garment_type: 'bolsas')
+= render partial: 'collections_links'
 
 
 - @garments.each do |garment|
