@@ -1,13 +1,15 @@
 class VisitorsController < ApplicationController
+  before_action :set_carousel, only: [:home,:collection]
   def home
     @latest = Garment.latest_garments
-    @carousel = Carousel.last
+
   end
 
+
   def collection
-    sanitize_collection_id
-    @collection = Collection.find params[:collection_id]
-    @allCollections = Collection.latest_collections
+    check_garment_type
+    @garments = Garment.where kind: params[:garment_type]
+
   end
 
   def garment
@@ -15,9 +17,14 @@ class VisitorsController < ApplicationController
   end
 
   private
-  def sanitize_collection_id
-    unless params[:collection_id]
-      params[:collection_id] = Collection.last
+  def set_carousel
+    @carousel = Carousel.last
+  end
+
+  def check_garment_type
+    unless params[:garment_type]
+      params[:garment_type] = 'ropa'
     end
+
   end
 end

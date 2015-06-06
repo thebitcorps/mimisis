@@ -1,3 +1,9 @@
-%h1 Visitors#collection
+= render :partial => 'carousel'
 
-= @collection.name
+= link_to 'Ropa',visitors_collection_path(garment_type: 'ropa')
+= link_to 'Bisuteria',visitors_collection_path(garment_type: 'bisuteria')
+= link_to 'Bolsas',visitors_collection_path(garment_type: 'bolsas')
+
+
+- @garments.each do |garment|
+  = render partial: 'garment',locals:{ garment: garment}

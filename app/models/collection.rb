@@ -9,6 +9,6 @@ class Collection < ActiveRecord::Base
   end
 
   def self.latest_collections
-    order_by_date.limit 10
+    order_by_date.limit 3
   end
 end

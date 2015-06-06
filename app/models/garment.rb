@@ -1,6 +1,6 @@
 class Garment < ActiveRecord::Base
   belongs_to :collection
-  GARMENT_KINDS = %w[bisutería vestido blusa]
+  GARMENT_KINDS = %w[bisuteria ropa bolsas]
 
   validates :name, :description, :kind,:collection, presence: true
   validates_inclusion_of :kind, in: GARMENT_KINDS
