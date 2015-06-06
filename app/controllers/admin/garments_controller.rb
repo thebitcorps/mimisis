@@ -1,4 +1,4 @@
-class GarmentsController < ApplicationController
+class Admin::GarmentsController < ApplicationController
   before_action :set_garment, only: [:show, :edit, :update, :destroy]
 
   # GET /garments

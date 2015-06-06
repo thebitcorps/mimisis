@@ -1,4 +1,4 @@
-class CarouselsController < ApplicationController
+class Admin::CarouselsController < ApplicationController
 
   # GET /carousels
   # GET /carousels.json

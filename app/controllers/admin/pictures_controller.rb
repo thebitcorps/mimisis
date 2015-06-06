@@ -1,4 +1,4 @@
-class PicturesController < ApplicationController
+class Admin::PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
 
   # GET /pictures/new
@@ -17,7 +17,7 @@ class PicturesController < ApplicationController
     @picture.carousel = Carousel.last
     respond_to do |format|
       if @picture.save
-        format.html { redirect_to carousels_path, notice: 'Picture was successfully created.' }
+        format.html { redirect_to admin_carousels_path, notice: 'Picture was successfully created.' }
       else
         format.html { render :new }
       end
@@ -29,7 +29,7 @@ class PicturesController < ApplicationController
   def update
     respond_to do |format|
       if @picture.update(picture_params)
-        format.html { redirect_to carousels_path, notice: 'Picture was successfully updated.' }
+        format.html { redirect_to admin_carousels_path, notice: 'Picture was successfully updated.' }
       else
         format.html { render :edit }
       end
@@ -41,7 +41,7 @@ class PicturesController < ApplicationController
   def destroy
     @picture.destroy
     respond_to do |format|
-      format.html { redirect_to carousels_path, notice: 'Picture was successfully destroyed.' }
+      format.html { redirect_to admin_carousels_path, notice: 'Picture was successfully destroyed.' }
     end
   end
 

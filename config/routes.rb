@@ -5,18 +5,11 @@ Rails.application.routes.draw do
 
   get 'visitors/garment/:id' => 'visitors#garment'
 
-  # resources :visitors do
-  #   get :garment, on: :member
-  #   get :collection, on: :collection
-  #   get :home, as: 'home'
-  # end
 
-  
+  namespace :admin do
+    resources :pictures, :carousels, :collections, :garments
+  end
 
-  resources :pictures
-  resources :carousels
-  resources :collections
-  resources :garments
 
   root to: "visitors#home"
 end

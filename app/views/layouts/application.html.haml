@@ -28,9 +28,14 @@
         %a.navbar-brand(href="/") Mimisis
         .navbar-collapse.collapse.navbar-responsive-collapse
           %ul.nav.navbar-nav
-            %li= link_to "Colecciones", collections_path
-            %li= link_to "Prendas", garments_path
-            %li= link_to "Carrusel", carousels_path
+            %li
+              = link_to "/"
+            %li
+              = link_to '#somos'
+            %li
+              = link_to "Colleccion", visitors_collection_path
+
+
 
     .container
       .row
