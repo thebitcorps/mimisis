@@ -28,7 +28,7 @@ class Admin::GarmentsController < ApplicationController
 
     respond_to do |format|
       if @garment.save
-        format.html { redirect_to @garment, notice: 'Garment was successfully created.' }
+        format.html { redirect_to [:admin,@garment], notice: 'Garment was successfully created.' }
         format.json { render :show, status: :created, location: @garment }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class Admin::GarmentsController < ApplicationController
   def update
     respond_to do |format|
       if @garment.update(garment_params)
-        format.html { redirect_to @garment, notice: 'Garment was successfully updated.' }
+        format.html { redirect_to [:admin,@garment], notice: 'Garment was successfully updated.' }
         format.json { render :show, status: :ok, location: @garment }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class Admin::GarmentsController < ApplicationController
   def destroy
     @garment.destroy
     respond_to do |format|
-      format.html { redirect_to garments_url, notice: 'Garment was successfully destroyed.' }
+      format.html { redirect_to admin_garments_url, notice: 'Garment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class Admin::GarmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def garment_params
-      params.require(:garment).permit(:name, :kind, :description, :price, :size_id, :collection_id,:latest)
+      params.require(:garment).permit(:name, :kind, :description, :price, :size_id, :collection_id,:latest,:image_url)
     end
 end

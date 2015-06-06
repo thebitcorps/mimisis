@@ -19,7 +19,7 @@
 
 
   %body
-    .navbar.navbar-default.navbar-static-top
+    .navbar.navbar-inverse.navbar-static-top
       .container
         %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
           %span.icon-bar
@@ -43,5 +43,20 @@
           = bootstrap_flash
           = yield
 
-      %footer
-        %p &copy; The Bit Corps 2015
+      .footer
+        = render partial: 'layouts/footer'
+    .navbar.navbar-inverse.navbar-fixed-bottom
+      .container
+        %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand(href="/") Mimisis
+        .navbar-collapse.collapse.navbar-responsive-collapse
+          %ul.nav.navbar-nav
+            %li
+              = link_to "/"
+            %li
+              = link_to '#somos'
+            %li
+              = link_to "Colleccion", visitors_collection_path

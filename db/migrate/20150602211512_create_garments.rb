@@ -6,6 +6,7 @@ class CreateGarments < ActiveRecord::Migration
       t.text :description
       t.decimal :price
       t.integer :sizes, default: 0
+      t.string :image_url
       t.boolean :latest, default: false
 
       t.timestamps null: false

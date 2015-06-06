@@ -1,0 +1,47 @@
+#contacto
+  %h1 Contacto
+  = image_tag 'lineacontacto.png'
+  %form.form-inline
+    .form-group
+      %label{:for => "exampleInputName2"} Name
+      %input#name.form-control{ :type => "text"}/
+  %form.form-inline
+    .form-group
+      %label{:for => "exampleInputName2"} Edad
+      %input#age.form-control{ :type => "text"}/
+
+  %form.form-inline
+    .form-group
+      %label{:for => "exampleInputName2"} Sexo
+      %input{"aria-label" => "...", :type => "checkbox"}/
+      M
+      %input{"aria-label" => "...", :type => "checkbox"}/
+      F
+  %form.form-inline
+    .form-group
+      %label{:for => "exampleInputName2"} Email
+      %input#email.form-control{ :type => "text"}/
+  %form.form-inline
+    .form-group
+      %label{:for => "exampleInputName2"} Comentario
+      %input#comment.form-control{ :type => "text"}/
+  %button.btn.btn-primary{"data-target" => "#myModal", "data-toggle" => "modal", :type => "button"}
+    Launch demo modal
+
+  #myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+            %span{"aria-hidden" => "true"} ×
+          %h4#myModalLabel.modal-title Gracias por su Comentario
+        .modal-body
+          Estaremos en contacto con usted inmediatamente
+        .modal-footer
+          %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+
+#mapa
+  Map
+
+
+

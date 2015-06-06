@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20150604171128) do
     t.text     "description"
     t.decimal  "price"
     t.integer  "sizes",         default: 0
+    t.string   "image_url"
     t.boolean  "latest",        default: false
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false

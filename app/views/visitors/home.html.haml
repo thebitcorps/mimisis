@@ -1,24 +1,17 @@
-#carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
-  / Indicators
-  %ol.carousel-indicators
-    %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
-    %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
-    %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
-  / Wrapper for slides
-  .carousel-inner{:role => "listbox"}
-    .item.active
-      %img{:alt => "...", :src => "..."}/
-      .carousel-caption
-        \...
-    .item
-      %img{:alt => "...", :src => "..."}/
-      .carousel-caption
-        \...
-    \...
-  / Controls
-  %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example-generic", :role => "button"}
-    %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
-    %span.sr-only Previous
-  %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-example-generic", :role => "button"}
-    %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
-    %span.sr-only Next
+= render :partial => 'carousel'
+
+
+
+#novedades.novedades
+  = image_tag 'barratitular_novedades.png'
+  - @latest.each do |garment|
+    = render partial: 'garment' ,locals:{ garment: garment}
+
+#quienes_somos.quienes_somos
+  = image_tag 'barratitular_quienes somos.png'
+  %p
+    Mimisis significa "Representacion", por ello se p4reocupa por refejar tus gustos e intereses detro de la moda proporcionandote las mejores y sofisticadas prendas del momento.MIMISIS BOUTIQUE es una tienda de prendas casuales oara dana que pone a disposicion del cliente las nuevas tendencias de la moday permite un ambiente en el que puedes sentise identificado
+  %p#mision
+    Proporcionar a nuestro clientes prendas de calidad, ofreciendo las ultimas tendencias moda en Primavera-Verano y Otońo-Invierno, cumplicara con las caracteristicas de practica estetica  y simbolicas que les proporcionen total satisfaccion en el uso.
+  %p#vision
+  %p#valores
