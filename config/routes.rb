@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'garments/index'
+
+  get 'garments/show'
+
   get 'visitors/home'
   # get 'visitors/collection'
   # get 'visitors/garment/:id' => 'visitors#garment'

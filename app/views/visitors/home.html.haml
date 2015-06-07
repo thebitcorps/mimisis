@@ -1,28 +1,24 @@
-= render partial: 'layouts/carousel'
 .row
   #novedades
     %h2.rojo Novedades
-    = render @garments
+    .col-md-12
+      = render @garments
 .row
   %h2.negro Quienes somos
   .col-md-6
     #quienes
       %p
         Mimesis significa "Representación", por ello se preocupa por refejar tus gustos e intereses detro de la moda proporcionándote las mejores y sofisticadas prendas del momento. 
-        %span MIMESIS BOUTIQUE 
+        %span.negrita MIMESIS BOUTIQUE 
         es una tienda de prendas casuales para dama que pone a disposición del cliente las nuevas tendencias de la moda y permite un ambiente en el que puedes sentirte identificado.
   / la otra columna
   .col-md-6
-    #mvv
-      .row
-        .col-md-4
-          %h3 Misión
-        .col-md-4
-          %h3 Visión
-        .col-md-4
-          %h3 Valores
-      #mision
-        %p
-          Proporcionar a nuestros clientes prendas de calidad, ofreciendo las últimas tendencias moda en Primavera-Verano y Otoño-Invierno, cumplirá con las características de práctica estética y simbólicas que les proporcionen total satisfaccion en el uso.
-      #vision
-      #valores
+    .row
+      .col-md-4
+        %h3.activo Mision
+      .col-md-4
+        %h3.inactivo Vision
+      .col-md-4
+        %h3.inactivo Valores
+    #contenido_mvv
+      %p Proporcionar a nuestros clientes prendas de calidad, ofreciendo las últimas tendencias moda en Primavera-Verano y Otoño-Invierno, cumplirá con las características de práctica estética y simbólicas que les proporcionen total satisfaccion en el uso.

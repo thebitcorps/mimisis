@@ -1,16 +1,1 @@
-= render partial: 'collections_links'
-.image
-  = image_tag(@garment.image_url)
-
-.content
-  %p
-    = @garment.name
-  %p
-    = @garment.description
-  %p
-    = @garment.kind
-  %p
-    = @garment.sizes
-
-  %p
-    = image_tag 'boton_cosiguelo.png'
+= render @garments
