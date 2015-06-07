@@ -4,8 +4,8 @@
       %span.icon-bar
       %span.icon-bar
       %span.icon-bar
-    = link_to root_path class: 'navbar-brand' do
-      = image_tag "logo-h.png", html: {style: 'max-width:100px;'}
+    / = link_to root_path class: 'navbar-brand' do
+    /   = image_tag "logo-h.png", html: {style: 'max-width:100px;'}
     .navbar-collapse.collapse.navbar-responsive-collapse
       %ul.nav.navbar-nav
         %li
@@ -13,6 +13,6 @@
         %li
           = link_to 'Somos', root_path(anchor: 'quienes')
         %li
-          = link_to "Catálogo", collections_path
+          = link_to "Catálogo", garments_path
         %li
           = link_to "Contacto", '#contacto'

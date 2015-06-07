@@ -1,0 +1,37 @@
+               Prefix Verb   URI Pattern                           Controller#Action
+        visitors_home GET    /visitors/home(.:format)              visitors#home
+  visitors_collection GET    /visitors/collection(.:format)        visitors#collection
+                      GET    /visitors/garment/:id(.:format)       visitors#garment
+       admin_pictures GET    /admin/pictures(.:format)             admin/pictures#index
+                      POST   /admin/pictures(.:format)             admin/pictures#create
+    new_admin_picture GET    /admin/pictures/new(.:format)         admin/pictures#new
+   edit_admin_picture GET    /admin/pictures/:id/edit(.:format)    admin/pictures#edit
+        admin_picture GET    /admin/pictures/:id(.:format)         admin/pictures#show
+                      PATCH  /admin/pictures/:id(.:format)         admin/pictures#update
+                      PUT    /admin/pictures/:id(.:format)         admin/pictures#update
+                      DELETE /admin/pictures/:id(.:format)         admin/pictures#destroy
+      admin_carousels GET    /admin/carousels(.:format)            admin/carousels#index
+                      POST   /admin/carousels(.:format)            admin/carousels#create
+   new_admin_carousel GET    /admin/carousels/new(.:format)        admin/carousels#new
+  edit_admin_carousel GET    /admin/carousels/:id/edit(.:format)   admin/carousels#edit
+       admin_carousel GET    /admin/carousels/:id(.:format)        admin/carousels#show
+                      PATCH  /admin/carousels/:id(.:format)        admin/carousels#update
+                      PUT    /admin/carousels/:id(.:format)        admin/carousels#update
+                      DELETE /admin/carousels/:id(.:format)        admin/carousels#destroy
+    admin_collections GET    /admin/collections(.:format)          admin/collections#index
+                      POST   /admin/collections(.:format)          admin/collections#create
+ new_admin_collection GET    /admin/collections/new(.:format)      admin/collections#new
+edit_admin_collection GET    /admin/collections/:id/edit(.:format) admin/collections#edit
+     admin_collection GET    /admin/collections/:id(.:format)      admin/collections#show
+                      PATCH  /admin/collections/:id(.:format)      admin/collections#update
+                      PUT    /admin/collections/:id(.:format)      admin/collections#update
+                      DELETE /admin/collections/:id(.:format)      admin/collections#destroy
+       admin_garments GET    /admin/garments(.:format)             admin/garments#index
+                      POST   /admin/garments(.:format)             admin/garments#create
+    new_admin_garment GET    /admin/garments/new(.:format)         admin/garments#new
+   edit_admin_garment GET    /admin/garments/:id/edit(.:format)    admin/garments#edit
+        admin_garment GET    /admin/garments/:id(.:format)         admin/garments#show
+                      PATCH  /admin/garments/:id(.:format)         admin/garments#update
+                      PUT    /admin/garments/:id(.:format)         admin/garments#update
+                      DELETE /admin/garments/:id(.:format)         admin/garments#destroy
+                 root GET    /                                     visitors#home

@@ -1,0 +1,136 @@
+@font-face {
+    font-family: Gotham-Thin;
+    src: url(GothamRnd-Light.otf);
+}
+
+@font-face {
+    font-family: "Gotham Rouded Book";
+    src: url(GothamRnd-Book.otf);
+}
+
+@font-face {
+    font-family: "New Cicle";
+    src: url(New_Cicle_Gordita.ttf);
+}
+
+@font-face {
+    font-family: Bebas;
+    src: url(BEBAS__.TTF);
+}
+
+
+/*body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+  margin:0;
+  padding:0;
+  border-width:0;
+}
+
+td, th {
+  border-style:solid;
+  border-width:1px;
+}
+table {
+  border-collapse:collapse;
+}
+li {
+  display:block;
+}
+*/
+body {
+  font-size:12px;
+  -epub-hyphens:auto;
+}
+
+.indentado{
+  margin-left: 25px;
+}
+
+h2 .indentado{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.rojo{
+  background-color: #a32e27;
+  color: #ffffff;
+  font-family:Bebas, sans-serif;
+  height: 4em;
+  /*font-size:32px;*/
+}
+
+.negro{
+  background-color: #000000;
+  color: #ffffff;
+  font-family:Bebas, sans-serif;
+  height: 4em;
+  /*font-size:32px;*/
+}
+
+.blanco{
+  background-color: #ffffff;
+  color: #000000;
+  font-family:Bebas, sans-serif;
+  /*font-size:32px;*/
+}
+
+.activo{
+  color: #a32e27;
+  font-family:Bebas, sans-serif;
+  /*font-size:24px;*/
+}
+
+.inactivo{
+  color: #888888;
+  font-family:Bebas, sans-serif;
+  /*font-size:24px;*/
+}
+
+.navbar a{
+  color:#ffffff;
+  font-family:"Gotham Rounded Book", sans-serif;
+  /*font-size:18px;*/
+  font-style:normal;
+  /*font-weight:325;*/
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 50px;
+  margin-left: 0px;
+  padding: 30px;
+}
+
+.info{
+  margin-top: 3em;
+}
+
+.info .col-md-4 h3{
+  margin-top: 0;
+}
+
+p{
+  color:#000000;
+  font-family:"Gotham-Thin", sans-serif;
+  /*font-size:18px;*/
+  /*font-weight:200;*/
+  /*line-height:1.222;*/
+  /*text-align:left;*/
+}
+
+.formulario {
+  color:#414042;
+  font-family:"New Cicle", sans-serif;
+  /*font-size:22px;*/
+  /*line-height:1.636;*/
+/*  margin-bottom:0px;
+  margin-left:0px;
+  margin-right:0px;
+  text-align:justify;
+  text-decoration:none;
+  text-indent:0px;*/
+}
+.form-group{
+  display: inline;
+}
