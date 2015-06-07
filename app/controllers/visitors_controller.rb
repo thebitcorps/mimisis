@@ -2,7 +2,7 @@ class VisitorsController < ApplicationController
   before_action :set_carousel, only: [:home, :collection]
 
   def home
-    @latest = Garment.latest_garments
+    @garments = Garment.latest_garments
   end
 
   def collection
