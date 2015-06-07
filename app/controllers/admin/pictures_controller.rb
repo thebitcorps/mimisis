@@ -1,6 +1,10 @@
 class Admin::PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @pictures = Picture.all
+  end
+
   # GET /pictures/new
   def new
     @picture = Picture.new

@@ -1,0 +1,18 @@
+.navbar.navbar-inverse.navbar-static-top
+  .container
+    %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    = link_to root_path class: 'navbar-brand' do
+      = image_tag "logo-h.png", html: {style: 'max-width:100px;'}
+    .navbar-collapse.collapse.navbar-responsive-collapse
+      %ul.nav.navbar-nav
+        %li
+          = link_to "Inicio", root_path
+        %li
+          = link_to 'Somos', '#somos'
+        %li
+          = link_to "Catálogo", collections_path
+        %li
+          = link_to "Contacto", collections_path

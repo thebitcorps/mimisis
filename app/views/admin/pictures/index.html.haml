@@ -1,0 +1,4 @@
+- @pictures.each do |picture|
+  %p= link_to picture.id, [:admin, picture]
+
+= link_to 'nueva imagen', new_admin_picture_path, class: 'btn'
