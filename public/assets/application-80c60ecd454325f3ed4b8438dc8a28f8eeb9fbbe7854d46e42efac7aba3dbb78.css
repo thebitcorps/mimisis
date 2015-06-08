@@ -7793,27 +7793,27 @@ body { padding-bottom: 70px; }
 
 @font-face {
     font-family: Gotham-Thin;
-    src: url(GothamRnd-Light.otf);
+    src: url("fonts/GothamRnd-Light.otf");
 }
 
 @font-face {
     font-family: "Gotham Rounded Book";
-    src: url(GothamRnd-Book.otf);
+    src: url("fonts/GothamRnd-Book.otf");
 }
 
 @font-face {
     font-family: "New Cicle";
-    src: url(New_Cicle_Gordita.ttf);
+    src: url("fonts/New_Cicle_Gordita.ttf");
 }
 
 @font-face {
     font-family: Bebas;
-    src: url(BEBAS__.TTF);
+    src: url("fonts/BEBAS__.TTF");
 }
 
 @font-face {
     font-family: "Gotham Rounded Bold";
-    src: url(GothamRnd-Bold.otf);
+    src: url("fonts/GothamRnd-Bold.otf");
 }
 
 body {
