@@ -1,4 +1,5 @@
 class Admin::CollectionsController < ApplicationController
+  layout 'admin'
   before_action :set_collection, only: [:show, :edit, :update, :destroy]
 
   # GET /collections

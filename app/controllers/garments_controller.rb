@@ -6,7 +6,8 @@ class GarmentsController < ApplicationController
   end
 
   def show
-    @garment = Garment.find(params[:garment])
+    @carousel = Carousel.last
+    @garment = Garment.find(params[:id])
   end
 
   def check_garment_type

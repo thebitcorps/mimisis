@@ -1,4 +1,5 @@
 class Admin::GarmentsController < ApplicationController
+  layout 'admin'
   before_action :set_garment, only: [:show, :edit, :update, :destroy]
 
   # GET /garments

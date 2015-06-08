@@ -1,4 +1,5 @@
 class Admin::PicturesController < ApplicationController
+  layout 'admin'
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
 
   def index

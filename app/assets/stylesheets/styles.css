@@ -150,3 +150,22 @@ font-size: 120%;
 .navbar-fixed-bottom{
   margin-bottom: 30px;
 }
+.garment .content{
+  text-align: center;
+}
+
+.rojo.info h2{
+  margin-top: 5px;
+}
+
+.izq{
+  text-align: left;
+}
+
+.cent{
+  text-align: center;
+}
+
+.der{
+  text-align: right;
+}

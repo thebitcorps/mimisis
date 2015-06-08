@@ -1,6 +1,6 @@
 .col-md-3
   .garment
-    = link_to(image_tag(garment.image_url), garment)
+    = link_to(image_tag(garment.image_url, class: 'img-responsive'), garment)
     .content
-      = garment.name
-      = garment.description
+      %h3.activo= garment.name
+      %p= garment.description
