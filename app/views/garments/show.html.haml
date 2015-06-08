@@ -3,10 +3,10 @@
 .row.info
   .col-md-6
     .garment
-      = image_tag(@garment.image_url)
+      = image_tag(@garment.image_url, class: 'img-circle')
   .col-md-6
     .content
-      %h2.title
+      %h2.texto-rojo
         = @garment.name
       %p.description
         = @garment.description
@@ -14,4 +14,4 @@
         = @garment.kind
       / %p
       /   = @garment.sizes
-      %h2.rojo Consiguelo
+      %h2.boton Consiguelo

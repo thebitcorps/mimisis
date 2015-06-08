@@ -2,27 +2,27 @@ body { padding-bottom: 70px; }
 
 @font-face {
     font-family: Gotham-Thin;
-    src: url("fonts/GothamRnd-Light.otf");
+    src: url("GothamRnd-Light.otf");
 }
 
 @font-face {
     font-family: "Gotham Rounded Book";
-    src: url("fonts/GothamRnd-Book.otf");
+    src: url("GothamRnd-Book.otf");
 }
 
 @font-face {
     font-family: "New Cicle";
-    src: url("fonts/New_Cicle_Gordita.ttf");
+    src: url("New_Cicle_Gordita.ttf");
 }
 
 @font-face {
     font-family: Bebas;
-    src: url("fonts/BEBAS__.TTF");
+    src: url("BEBAS__.TTF");
 }
 
 @font-face {
     font-family: "Gotham Rounded Bold";
-    src: url("fonts/GothamRnd-Bold.otf");
+    src: url("GothamRnd-Bold.otf");
 }
 
 body {
@@ -73,6 +73,21 @@ h2 .indentado{
   font-family:"Gotham Rounded Book";
   font-style:normal;
 }
+
+.boton{
+  padding: 5px;
+  display: inline-block;
+  color: #fff;
+  background-color: #a32e27;
+  font-family:Bebas;
+  font-size: 2em;
+}
+
+.texto-rojo{
+  font-family: Bebas;
+  color: #a32e27;
+}
+
 
 /*.navbar-brand {
   position: absolute;
@@ -186,4 +201,11 @@ h2.title{
 p.description{
  font-family: "Gotham Rounded Book";
  font-size: 1.5em; 
+}
+
+.luna{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 9;
 }
