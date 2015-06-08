@@ -125,6 +125,10 @@ p{
   /*text-align:left;*/
 }
 
+p .negrita{
+  font-family: "Gotham Rounded Bold";
+}
+
 .formulario {
   color:#414042;
   font-family:"New Cicle", sans-serif;
