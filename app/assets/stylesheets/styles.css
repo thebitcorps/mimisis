@@ -1,3 +1,5 @@
+body { padding-bottom: 70px; }
+
 @font-face {
     font-family: Gotham-Thin;
     src: url(GothamRnd-Light.otf);
@@ -23,27 +25,8 @@
     src: url(GothamRnd-Bold.otf);
 }
 
-
-/*body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
-  margin:0;
-  padding:0;
-  border-width:0;
-}
-
-td, th {
-  border-style:solid;
-  border-width:1px;
-}
-table {
-  border-collapse:collapse;
-}
-li {
-  display:block;
-}
-*/
 body {
   font-size:12px;
-  -epub-hyphens:auto;
 }
 
 .indentado{
@@ -55,50 +38,43 @@ h2 .indentado{
   vertical-align: middle;
 }
 
+.rojo, .negro, .blanco{
+  font-family:Bebas;
+  height: 4em;
+}
+
 .rojo{
   background-color: #a32e27;
   color: #ffffff;
-  font-family:Bebas, sans-serif;
-  height: 4em;
-  /*font-size:32px;*/
 }
 
 .negro{
   background-color: #000000;
   color: #ffffff;
-  font-family:Bebas, sans-serif;
-  height: 4em;
-  /*font-size:32px;*/
 }
 
 .blanco{
   background-color: #ffffff;
   color: #000000;
-  font-family:Bebas, sans-serif;
-  /*font-size:32px;*/
 }
 
 .activo{
   color: #a32e27;
-  font-family:Bebas, sans-serif;
-  /*font-size:24px;*/
+  font-family:Bebas;
 }
 
 .inactivo{
   color: #888888;
-  font-family:Bebas, sans-serif;
-  /*font-size:24px;*/
+  font-family:Bebas;
 }
 
 .navbar a{
   color:#ffffff;
-  font-family:"Gotham Rounded Book", sans-serif;
-  /*font-size:18px;*/
+  font-family:"Gotham Rounded Book";
   font-style:normal;
-  /*font-weight:325;*/
 }
 
-.navbar-brand {
+/*.navbar-brand {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -106,6 +82,7 @@ h2 .indentado{
   margin-left: 0px;
   padding: 30px;
 }
+*/
 
 .info{
   margin-top: 3em;
@@ -119,36 +96,33 @@ p{
   color:#000000;
   font-family:"Gotham-Thin", sans-serif;
   font-size: 120%;
-  /*font-size:18px;*/
-  /*font-weight:200;*/
-  /*line-height:1.222;*/
-  /*text-align:left;*/
 }
 
-p .negrita{
+p .negrita, .formulario label
+{
   font-family: "Gotham Rounded Bold";
 }
 
 .formulario {
   color:#414042;
   font-family:"New Cicle", sans-serif;
-  /*font-size:22px;*/
-  /*line-height:1.636;*/
-/*  margin-bottom:0px;
-  margin-left:0px;
-  margin-right:0px;
-  text-align:justify;
-  text-decoration:none;
-  text-indent:0px;*/
 }
+
 .form-group{
   display: inline;
 }
 
-.decoracion-negra{
-  background-image: url("barra-negra.png");
+.barra, .barranegra{
+  width: 100%;
+  height: 50px;
+  display: inline-block;
+  background-image: url("barra_negra.png");
   background-repeat: repeat-x;
-  background-position: left bottom;
+  /*background-position: 0 0;*/
+}
+
+.navbar{
+  margin-top: 50px;
 }
 
 .navbar .nav > li > a, .navbar .nav > li > a:first-letter,
@@ -156,11 +130,23 @@ p .negrita{
 .navbar .nav > li.current-menu-ancestor > a {
 color: #ffffff;
 font-family: "Gotham Rounded Book";
-font-size: 110%;
+font-size: 120%;
 }
 
 .img-responsive2 {
     display: inline-block;
-    max-width: 20%;
+    max-width: 90%;
     height: auto;
+    margin-top: -30%;
+}
+
+.img-responsivef {
+    display: inline-block;
+    max-width: 50%;
+    height: auto;
+    margin-top: -25%;
+}
+
+.navbar-fixed-bottom{
+  margin-bottom: 30px;
 }

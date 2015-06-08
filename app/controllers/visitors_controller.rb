@@ -24,5 +24,4 @@ class VisitorsController < ApplicationController
       params[:garment_type] = 'ropa'
     end
   end
-
 end
