@@ -4,7 +4,7 @@
 }
 
 @font-face {
-    font-family: "Gotham Rouded Book";
+    font-family: "Gotham Rounded Book";
     src: url(GothamRnd-Book.otf);
 }
 
@@ -16,6 +16,11 @@
 @font-face {
     font-family: Bebas;
     src: url(BEBAS__.TTF);
+}
+
+@font-face {
+    font-family: "Gotham Rounded Bold";
+    src: url(GothamRnd-Bold.otf);
 }
 
 
@@ -113,6 +118,7 @@ h2 .indentado{
 p{
   color:#000000;
   font-family:"Gotham-Thin", sans-serif;
+  font-size: 120%;
   /*font-size:18px;*/
   /*font-weight:200;*/
   /*line-height:1.222;*/
@@ -133,4 +139,24 @@ p{
 }
 .form-group{
   display: inline;
+}
+
+.decoracion-negra{
+  background-image: url("barra-negra.png");
+  background-repeat: repeat-x;
+  background-position: left bottom;
+}
+
+.navbar .nav > li > a, .navbar .nav > li > a:first-letter,
+.navbar .nav > li.current-menu-item > a, 
+.navbar .nav > li.current-menu-ancestor > a {
+color: #ffffff;
+font-family: "Gotham Rounded Book";
+font-size: 110%;
+}
+
+.img-responsive2 {
+    display: inline-block;
+    max-width: 20%;
+    height: auto;
 }

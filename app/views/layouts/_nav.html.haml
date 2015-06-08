@@ -4,8 +4,9 @@
       %span.icon-bar
       %span.icon-bar
       %span.icon-bar
-    / = link_to root_path class: 'navbar-brand' do
-    /   = image_tag "logo-h.png", html: {style: 'max-width:100px;'}
+    %h1.navbar-brand
+      = link_to root_path do
+        = image_tag "logo-h.png", class: 'img-responsive2'
     .navbar-collapse.collapse.navbar-responsive-collapse
       %ul.nav.navbar-nav
         %li

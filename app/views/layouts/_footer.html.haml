@@ -1,5 +1,5 @@
 .row
-  .barra
+  .barra.decoracion-negra
     %h2.blanco Contactanos
   .col-md-6
     #contacto.formulario
@@ -22,8 +22,8 @@
         .form-group
           %label{:for => "exampleInputName2"} Comentario
           %input#comment.form-control{ :type => "textarea"}/
-      %button.btn.btn-primary{"data-target" => "#myModal", "data-toggle" => "modal", :type => "button"}
-        Lanzar modal
+      %button.btn{"data-target" => "#myModal", "data-toggle" => "modal", :type => "button"}
+        Enviar
   .col-md-6
     #mapa
       #google-map{style: "height:320px", 'data-latitude' => "21.8501242", 'data-longitude' => "-102.2925986"}
