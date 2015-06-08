@@ -158,14 +158,32 @@ font-size: 120%;
   margin-top: 5px;
 }
 
-.izq{
+.izq, #colection-links .izq a{
+  display: block;
   text-align: left;
 }
 
-.cent{
+.cent, #colection-links .cent a{
+  display: block;
   text-align: center;
 }
 
-.der{
+.der, #colection-links .der a{
+  display: block;
   text-align: right;
+}
+
+#colection-links a{
+  color: #ffffff;
+}
+
+h2.title{
+  font-family: Bebas;
+  color: #000;
+  /*font-size: 120%;*/
+}
+
+p.description{
+ font-family: "Gotham Rounded Book";
+ font-size: 1.5em; 
 }

@@ -1,18 +1,17 @@
 = render partial: 'collections/links'
 
-.row
+.row.info
   .col-md-6
     .garment
       = image_tag(@garment.image_url)
   .col-md-6
     .content
-      %p
+      %h2.title
         = @garment.name
-      %p
+      %p.description
         = @garment.description
-      %p
+      %p.description
         = @garment.kind
-      %p
-        = @garment.sizes
-      %p
-        = image_tag 'boton_cosiguelo.png'
+      / %p
+      /   = @garment.sizes
+      %h2.rojo Consiguelo
