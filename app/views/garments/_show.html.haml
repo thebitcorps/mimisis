@@ -1,0 +1,15 @@
+.row.info
+  .col-md-6
+    .garment
+      = image_tag(@garment.image_url, class: 'img-circle')
+  .col-md-6
+    .content
+      %h2.texto-rojo
+        = @garment.name
+      %p.description
+        = @garment.description
+      %p.description
+        = @garment.kind
+      / %p
+      /   = @garment.sizes
+      %h2.boton Consiguelo

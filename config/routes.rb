@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # get 'visitors/collection'
   # get 'visitors/garment/:id' => 'visitors#garment'
 
-  resources :garments, only: [:index, :show]
+  resources :garments, only: [:index, :show,:lastest]
   resources :collections, only: [:index]
 
   namespace :admin do

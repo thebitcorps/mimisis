@@ -1,7 +1,7 @@
 .col-md-3
   .garment
     / # = image_tag 'luna.png', class: 'img-responsive luna'
-    = link_to(image_tag(garment.image_url, class: 'img-responsive img-circle'), garment)
+    = link_to(image_tag(garment.image_url, class: 'img-responsive img-circle'), garment,remote: true)
     .content
       %h3.activo= garment.name
       %p= garment.description
